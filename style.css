@@ -384,6 +384,18 @@ main {
 .split.two-text .artifact-description {
   margin: 0;
 }
+/* Alternate layout: document on the right, writing on the left (desktop only) */
+@media (min-width: 901px) {
+  .split.flip {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  }
+  .split.flip .split-text {
+    order: 1;
+  }
+  .split.flip .split-media {
+    order: 2;
+  }
+}
 .reflection {
   padding: 18px 20px;
   border-left: 4px solid var(--blue);
