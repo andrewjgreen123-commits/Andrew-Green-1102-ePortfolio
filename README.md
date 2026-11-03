@@ -10,42 +10,17 @@ A static HTML/CSS portfolio designed for GitHub Pages. The pages preserve the ex
 - `style.css` — shared styling
 - `assets/pdfs/` — put artifact PDFs here
 
-## Add a PDF
+## PDFs and survey
 
-1. Export your assignment as a PDF.
-2. Put it in `assets/pdfs/`.
-3. Use the filename shown on the matching artifact card, or update the two PDF links in that card to match your filename.
-4. Commit and push the change. GitHub Pages will publish it with the site.
+PDFs live in `assets/pdfs/` and are embedded in the pages with an `<iframe>` plus "Open in new tab" and "Download" links:
 
-Current expected filenames:
+- `research-proposal.pdf` (outcome-1)
+- `google-survey.pdf` (outcome-1, collapsed backup copy of the survey)
+- `annotated-bibliography.pdf` (outcome-2)
 
-- `research-proposal.pdf`
-- `google-survey.pdf`
-- `annotated-bibliography.pdf`
-- `secondary-sources.pdf`
+The live Google Form is embedded on `outcome-1.html`. If it ever goes down, visitors can expand "Survey backup copy" to read or download the PDF version.
 
-The PDF cards currently contain links but do not embed a preview until the corresponding PDF file exists. To embed a PDF in the page, add this inside the matching `.pdf-card`:
-
-```html
-<iframe
-  class="pdf-preview"
-  src="assets/pdfs/research-proposal.pdf"
-  title="Research Proposal PDF"
-  loading="lazy">
-</iframe>
-```
-
-And add this to `style.css`:
-
-```css
-.pdf-preview {
-  display: block;
-  width: 100%;
-  height: 650px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-}
-```
+The ten secondary sources on `outcome-2.html` are written directly into the HTML and have no PDF.
 
 ## Publish with GitHub Pages
 
@@ -60,6 +35,5 @@ This is a static site; no build command or framework is required.
 
 ## Before publishing
 
-- Add the actual PDFs you want to share. Do not publish private or restricted class materials.
-- The Google Survey artifact currently has no live form URL because one was not present in the supplied embed code. Add your public Google Forms link if you want visitors to open the form.
-- Check that all assignment files and external source links are correct before submitting the portfolio.
+- Do not publish private or restricted class materials.
+- Check that all external source links are correct before submitting the portfolio.
